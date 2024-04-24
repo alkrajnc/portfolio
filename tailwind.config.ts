@@ -25,9 +25,20 @@ const config: Config = {
           '80%': { borderRadius: '40% 60% 42% 58% / 51% 51% 49% 59%;' },
           '100%': { borderRadius: '33% 67 % 70 % 30 % / 30% 40% 70% 70%;' },
         },
+        'rotate-warp': {
+          from: {
+            transform: 'rotate(0deg) skew(0deg)',
+            borderRadius: '37% 63 % 51 % 49 % / 37% 35% 35% 63%;',
+          },
+          to: {
+            transform: 'rotate(360deg) skew(60deg)',
+            borderRadius: '33% 67 % 70 % 30 % / 30% 40% 70% 70%;',
+          },
+        },
       },
       animation: {
-        warp: 'warp 7s ease-in-out infinite both alternate',
+        warp: 'warp 4s ease-in-out infinite both alternate',
+        'rotate-warp': 'rotate-warp 70s infinite both alternate',
       },
     },
   },

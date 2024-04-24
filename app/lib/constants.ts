@@ -1,9 +1,5 @@
 export const leftMenu = [
   {
-    name: 'Experience',
-    link: '/experience',
-  },
-  {
     name: 'Projects',
     link: '/projects',
   },
@@ -24,11 +20,11 @@ export const projects = [
       { text: 'Express', badgeVariant: 'express' },
     ],
     links: ['https://uinstruktor.sers.si/'],
+    coverImage: '/uinstuktor_showcase.png',
   },
   {
     title: 'No One Stays Behind',
-    description:
-      'A mobile app aimed to foster the motivation of students to develop their transversal skills, while preventing early school leaving among students from disadvantaged socio-economic backgrounds.',
+    description: 'A mobile app for the Erasmus+ project No One Stays Behind.',
     badges: [
       { text: 'React Native', badgeVariant: 'react' },
       { text: 'Firebase', badgeVariant: 'firebase' },
@@ -44,5 +40,6 @@ export const projects = [
       { text: 'Express', badgeVariant: 'express' },
       { text: 'MongoDB', badgeVariant: 'mongodb' },
     ],
+    links: [],
   },
 ];
