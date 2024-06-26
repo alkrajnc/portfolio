@@ -17,7 +17,7 @@ export default function Home() {
           Aljaž Krajnc
         </h1>
         <p className="mt-2 text-base font-medium text-neutral-500 dark:text-neutral-400">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Young developer with a passion for web development and devops.
         </p>
       </div>
       <div className="hidden lg:block">
@@ -43,12 +43,12 @@ export default function Home() {
         >
           <Github size={20} />
         </Link>
-        <Link
+        {/* <Link
           href={''}
           className="p-4 aspect-square flex items-center justify-center hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-lg  border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700"
         >
           <Linkedin size={20} />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
