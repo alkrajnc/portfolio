@@ -1,11 +1,7 @@
 export const leftMenu = [
   {
-    name: 'Projects',
-    link: '/projects',
-  },
-  {
-    name: 'Résumé',
-    link: '/resume',
+    name: 'CV',
+    link: '/cv.pdf',
   },
 ];
 
@@ -23,13 +19,18 @@ export const projects = [
     coverImage: '/uinstuktor_showcase.png',
   },
   {
-    title: 'No One Stays Behind',
-    description: 'A mobile app for the Erasmus+ project No One Stays Behind.',
+    title: 'Object storage',
+    description: 'Object storage application with a web interface',
     badges: [
-      { text: 'React Native', badgeVariant: 'react' },
-      { text: 'Firebase', badgeVariant: 'firebase' },
+      { text: 'Express', badgeVariant: 'express' },
+      { text: 'PostgreSQL', badgeVariant: 'mysql' },
     ],
-    links: ['https://nsb-erasmus.eu/'],
+    links: [],
+    coverImage: '/objectstorage_showcase.png',
+    detail: {
+      description:
+        'Object storage application with a web interface. The application is built with Express and PostgreSQL. The application allows users to upload files and store them on the server. Features access control to objects and user authentication.',
+    },
   },
   {
     title: 'Imageboard',

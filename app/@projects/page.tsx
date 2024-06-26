@@ -16,6 +16,7 @@ interface Project {
     badgeVariant: string;
   }[];
   links: string[];
+  detail: { description: string };
 }
 const Projects = () => {
   const [selectedProject, setSelectedProject] = React.useState<null | Project>(
@@ -33,6 +34,7 @@ const Projects = () => {
           return (
             <ProjectCard
               key={index}
+              detail={project.detail!}
               setSelectedProject={setSelectedProject}
               title={project.title}
               description={project.description}
@@ -43,14 +45,14 @@ const Projects = () => {
           );
         })}
       </div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {selectedProject && (
           <ProjectDescription
             project={selectedProject}
             close={handleCloseProjectDescription}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

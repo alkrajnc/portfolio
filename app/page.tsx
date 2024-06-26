@@ -2,13 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { leftMenu } from './lib/constants';
 import { Github, Linkedin } from 'lucide-react';
-import avatar from '@/public/avatar_placeholder.webp';
+import avatar from '@/public/me.jpg';
 
 export default function Home() {
   return (
     <div className="p-8 lg:p-16 flex flex-col justify-evenly">
       <div>
-        <Image src={avatar} className="rounded-full w-1/5" alt="My image" />
+        <Image
+          src={avatar}
+          className="rounded-full w-1/6 aspect-square object-fill"
+          alt="My image"
+        />
         <h1 className="text-4xl md:text-6xl py-2 font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-900 to-violet-400 dark:to-violet-300">
           Aljaž Krajnc
         </h1>
@@ -24,7 +28,9 @@ export default function Home() {
                 className="hover:underline font-medium w-max transition-all"
                 key={index}
               >
-                <Link href={item.link}>{item.name}</Link>
+                <Link target="_blank" href={item.link}>
+                  {item.name}
+                </Link>
               </li>
             );
           })}

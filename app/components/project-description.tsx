@@ -10,6 +10,7 @@ interface Project {
     badgeVariant: string;
   }[];
   links: string[];
+  detail: { description: string };
 }
 
 const ProjectDescription = ({
@@ -31,7 +32,9 @@ const ProjectDescription = ({
       </motion.div>
       <div className="flex flex-col gap-6">
         <motion.h1 className="text-4xl font-bold">{project.title}</motion.h1>
-        <motion.p className="text-neutral-300">{project.description}</motion.p>
+        <motion.p className="text-neutral-300 max-w-xl">
+          {project.detail.description}
+        </motion.p>
       </div>
     </motion.div>
   );

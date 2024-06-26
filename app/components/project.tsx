@@ -15,6 +15,7 @@ interface Project {
   }[];
   links: string[];
   showcaseImage: string;
+  detail: { description: string };
   setSelectedProject: React.Dispatch<
     React.SetStateAction<{
       title: string;
@@ -24,6 +25,7 @@ interface Project {
         badgeVariant: string;
       }[];
       links: string[];
+      detail: { description: string };
     } | null>
   >;
 }
@@ -44,6 +46,7 @@ const ProjectCard = ({
   links,
   badges,
   showcaseImage,
+  detail,
   setSelectedProject,
 }: Project) => {
   const [hovered, setHovered] = React.useState(false);
@@ -59,16 +62,16 @@ const ProjectCard = ({
       className="p-4 z-20 lg:min-w-[700px] overflow-hidden relative rounded-xl space-y-3 bg-contain group hover:bg-neutral-900/15 transition-all"
     >
       <h1
-        className="text-2xl text-neutral-200 hover:text-neutral-100 font-semibold cursor-pointer"
+        className="text-2xl text-neutral-200 hover:text-neutral-100 font-semibold \cursor-pointer"
         onClick={() =>
-          setSelectedProject({ title, description, links, badges })
+          setSelectedProject({ title, description, links, badges, detail })
         }
       >
         {title}{' '}
-        <MoveUpRight
+        {/* <MoveUpRight
           size={18}
           className="inline group-hover:text-purple-600 transition-colors"
-        />
+        /> */}
       </h1>
       <p className="text-neutral-300 ">{description}</p>
       {
@@ -103,9 +106,9 @@ const ProjectCard = ({
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             style={{
-              maskImage: 'linear-gradient(to left, black, transparent 70%)',
+              maskImage: 'linear-gradient(to left, black, transparent 80%)',
             }}
-            className="w-[900px]  absolute h-[500px] top-4 left-12 -rotate-[5deg] -z-10"
+            className="w-[900px]  absolute h-[500px] top-4 left-2 -rotate-[5deg] -z-10"
           >
             <Image
               src={showcaseImage}
